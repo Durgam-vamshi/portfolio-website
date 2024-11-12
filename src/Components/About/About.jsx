@@ -1,65 +1,43 @@
 import React from "react";
-import AboutImg from "../../assets/7358653-removebg-preview.png";
-import { IoArrowForward } from "react-icons/io5";
+import AboutImg from "../../assets/7358653-removebg-preview.png"; // Assuming the path is correct
+import { IoArrowForward } from "react-icons/io5"; // Icon for the job title
+
 const About = () => {
   return (
-    <div
+    <section
       id="About"
-      className="text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-black shadow-xl mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12"
+      className="bg-black bg-opacity-30 shadow-xl mx-4 md:mx-20 p-8 md:p-12 rounded-lg"
     >
-      <div>
-        <h2 className="text-2xl md:text-4xl font-bold">About</h2>
-        <div className="md:flex flex-wrap flex-col md:flex-row items-center">
-          <img className="md:h-80" src={AboutImg} alt="About img" />
+      <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        {/* Left Section: Image */}
+        <div className="flex justify-center md:justify-start">
+          <img
+            src={AboutImg}
+            alt="About"
+            className="w-100 h-30 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
+          />
+        </div>
 
-          <ul>
-            <div className="flex gap-3 py-4">
-              <IoArrowForward size={30} className="mt-1" />
-
-              <span className="w-96">
-                <h1 className="text-xl md:text-2xl font-semibold leading-normal">
-                  Frontend developer
-                </h1>
-                <p className="text-sm md:text-md leading-tight">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maiores explicabo deserunt asperiores quasi, vitae blanditiis
-                  perferendis quos consectetur ea harum! Libero aut qui
-                  similique recusandae provident consectetur sed itaque alias
-                  sint ipsa?
-                </p>
-              </span>
+        {/* Right Section: Title and Text */}
+        <div className="text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
+          <div className="flex flex-col items-center md:items-start">
+            <div className="flex items-center gap-3 mb-4">
+              <IoArrowForward size={30} className="text-indigo-500" />
+              <h3 className="text-xl md:text-2xl font-semibold text-white">
+                Frontend Developer
+              </h3>
             </div>
-            <div className="flex gap-3 py-4">
-              <IoArrowForward size={30} className="mt-1" />
-
-              <span className="w-96">
-                <h1 className="text-xl md:text-2xl font-semibold leading-normal">
-                  Database developer
-                </h1>
-                <p className="text-sm md:text-md leading-tight">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maiores
-                </p>
-              </span>
-            </div>
-            <div className="flex gap-3 py-4">
-              <IoArrowForward size={30} className="mt-1" />
-
-              <span className="w-96">
-                <h1 className="text-xl md:text-2xl font-semibold leading-normal">
-                  Backend developer
-                </h1>
-                <p className="text-sm md:text-md leading-tight">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maiores explicabo deserunt asperiores quasi, vitae blanditiis
-                  perferendis
-                </p>
-              </span>
-            </div>
-          </ul>
+            <p className="text-sm md:text-lg text-gray-300 leading-relaxed">
+              As a frontend developer, I create responsive web applications
+              using HTML, CSS, and JavaScript. I work closely with designers to
+              implement user-friendly interfaces and enhance user experience
+              through optimized design and performance.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

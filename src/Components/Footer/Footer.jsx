@@ -6,28 +6,33 @@ import { FaGithub } from "react-icons/fa";
 const Footer = () => {
   return (
     <div
-      id="Footer"
-      className="flex justify-around bg-[#465697] text-white p-10 md:p-12 items-center"
+      id="footer" // Ensure the footer has this id so the anchor link can target it
+      className="bg-[#465697] text-white p-10 md:p-12 flex flex-col md:flex-row justify-between items-center rounded-t-lg shadow-lg"
     >
-      <div>
-        <h1 className="text-2xl md:text-6xl font-bold">Contact</h1>
-        <h3 className="text-sm md:text-2xl font-normal">
-          Feel Free To reach out!
-        </h3>
+      {/* Left side - Contact Header */}
+      <div className="text-center md:text-left mb-8 md:mb-0">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">Contact</h1>
+        <h3 className="text-md md:text-2xl font-normal">Feel free to reach out!</h3>
       </div>
 
-      <ul className="text-sm md:text-xl">
-        <li className="flex gap-1 items-center">
-          <MdOutlineEmail size={20} />
-          myemail@gmail.com
+      {/* Right side - Contact Information */}
+      <ul className="mt-4 md:mt-0 text-sm md:text-lg flex flex-col md:flex-row md:gap-8 space-y-4 md:space-y-0 items-center">
+        {/* Email */}
+        <li className="flex items-center gap-3 transition-transform duration-300 transform hover:scale-105">
+          <MdOutlineEmail size={24} />
+          <span>durgamvamshicareer@gmail.com</span>
         </li>
-        <li className="flex gap-1 items-center">
-          <CiLinkedin />
-          linkdlin.com/username
+
+        {/* LinkedIn */}
+        <li className="flex items-center gap-3 transition-transform duration-300 transform hover:scale-105">
+          <CiLinkedin size={24} />
+          <span>linkedin.com/in/vamshidurgam</span>
         </li>
-        <li className="flex gap-1 items-center">
-          <FaGithub />
-          github.com/username
+
+        {/* GitHub */}
+        <li className="flex items-center gap-3 transition-transform duration-300 transform hover:scale-105">
+          <FaGithub size={24} />
+          <span>github.com/durgam-vamshi</span>
         </li>
       </ul>
     </div>
